@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ChronoPass</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Landing Page Specific Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar Specifics */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* The Login Button */
+        .btn-login {
+            background-color: #007bff;
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 100px;
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for the whole FAQ section */
+        .faq-container {
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+            background-color: #58d21e45;
+            padding: 10px;
+            width: 70vw;
+        }
+
+        /* The clickable question button */
+        .faq-question {
+            background-color: transparent;
+            color: #333;
+            /* Dark text color */
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 2px solid #ddd;
+            /* The line between items */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: rgb(247, 96, 69);
+            /* Change color on hover (optional) */
+        }
+
+        /* The container for the answer (hidden by default) */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            /* Smooth open/close animation */
+            background-color: rgb(172 255 158);
+            color: #007BFF;
+        }
+
+        /* Formatting the text inside the answer */
+        .faq-answer p {
+            padding: 20px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Arrow rotation styling */
+        .arrow {
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+
+        /* Class added by JS to rotate the arrow */
+        .faq-question.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/Frame 24.svg" alt="ChronoPass Logo" height="70px" width="70px">
+            <span>ChronoPass</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="mailto:contact@chronopass.com">Contact Us</a></li>
+
+            <li><a href="login.php" class="btn-login">Log In</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Secure Your Digital Life.</h1>
+            <p>
+                Stop struggling to remember passwords. ChronoPass is the secure, centralized vault for SDS Labs projects
+                and beyond.
+                Store your credentials safely and access them whenever you need.
+            </p>
+            <div>
+                <a href="login.php" class="btn-login">Get Started</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/img4.jpg" alt="Security Illustration" width="500">
+        </div>
+    </section>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <button class="faq-question">
+                <b> Why should I use a password manager like ChronoPass?</b>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    You should use ChronoPass because the average person has to remember over 80 different
+                    passwords,
+                    which is nearly impossible to do securely. Instead of reusing the same weak password everywhere
+                    (which is dangerous), ChronoPass lets you store unique, complex credentials for every site in a
+                    centralized, secure database. You only need to remember one 'Master Password,' and ChronoPass
+                    handles the rest.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                <b> What would a password manager allow me to do?</b>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    ChronoPass acts as your centralized digital vault. It allows you to securely input and store
+                    your
+                    usernames, passwords, and notes for various websites in one protected database. Instead of
+                    struggling to remember login details for every site you visit, ChronoPass lets you organize them
+                    all
+                    in a single dashboard, ensuring you always have access to your credentials when you need them.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                <b>Is my data secure with a password manager?</b>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes. ChronoPass is designed to be far more secure than keeping passwords in a notebook or a
+                    sticky
+                    note. Your data is stored in a structured, local MySQL database that is isolated from the public
+                    internet. In a fully deployed environment, this 'digital vault' ensures that your sensitive
+                    information is organized and restricted, accessible only when you authenticate with your Master
+                    Password.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I use same password for multiple accounts?
+                <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Due to security concerns, it’s not recommended to use the same password for all your accounts.
+                    If at
+                    least one of your accounts were to be breached, hacked, or otherwise compromised, that would
+                    make
+                    all your accounts vulnerable. This risk grows exponentially if you reuse the password for both
+                    personal and work-related accounts.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                <b>How can I see all my saved passwords in ChronoPass?</b>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    To access your stored credentials, simply navigate to the 'View Passwords' section of the
+                    ChronoPass
+                    dashboard. This secure area retrieves your encrypted data from the database and displays your
+                    list
+                    of saved websites and usernames in an organized table. For security, the actual passwords are
+                    hidden
+                    by default, but you can choose to reveal or copy them when needed.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2026 ChronoPass - Built for SDS Labs Project</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

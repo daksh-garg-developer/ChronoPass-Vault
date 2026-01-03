@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoPass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/img3.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/Frame 24.svg" alt="" height="40px" width="40px">
+                <span>ChronoPass</span>
+            </div>
+            <ul>
+                <li><a href="Home.html"><b>Home</b></a></li>
+                <li><a href="view_password.php"><b>View Vault</b></a></li>
+                <li><a href="logout.php" ><b>Logout</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container1">
+        <h1 class="heading">Welcome to the ChronoPass Manager</h1>
+        <h2 class="description">Securely store and manage your passwords with ease.</h2>
+
+        <div class="password_form">
+            <h1>
+                <div class="bye">
+                    <div class="text-animation">
+                        <span>Effortless</span>
+                        <span>Secure</span>
+                        <span>Reliable</span>
+                    </div>
+                    enterprise password management
+                </div>
+                <div class="img"><img src="images/img1.jpg" alt="" height="400px" width="400px"></div>
+            </h1>
+            <form class="form" action="store_password.php" method="POST">
+                <h2 class="subheading">Add your passwords here</h2>
+
+                <div class="website"> <img src="images/globe-12150.png" alt="" width="20px" height="20px"> <input
+                        type="text" name="website" placeholder="Website" required></div>
+
+                <div class="username"> <img src="images/user-276.png" alt="" width="20px" height="20px"><input
+                        type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="password"> <img src="images/key-6299.png" alt="" width="20px" height="20px"><input
+                        type="password" name="password" placeholder="Password" required></div>
+
+                <div class="content"><input type="text" name="content" placeholder="Content"></div>
+
+                <div class="submit"> <img src="images/hand-cursor-1285.png" alt="" width="30px" height="30px"><input
+                        type="submit" value="submit">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <footer class:="footer">
+        <p>&copy; 2026 ChronoPass. All rights reserved.</p>
+    </footer>
+    
+</body>
+
+</html>
